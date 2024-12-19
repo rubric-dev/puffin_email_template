@@ -76,35 +76,43 @@
                         padding: 0px 16px;
                       "
                     >
-                      {초대 받을 User Name} 님, 환영합니다! <br /><br />
-                      퍼핀 서비스를 사용해 주셔서 감사합니다. <br /><br />
+                      환영합니다!<br /><br />
+                      {{brandName}}에서 퍼핀 서비스의 관리자 멤버로 초대합니다.
+                      <br /><br />
 
                       아래 버튼을 클릭하셔서 초대를 수락하고, 회원가입을 완료
                       해주세요 🙂<br /><br />
                     </p>
-                    <a
-                      href="{{activate_url}}"
-                      target="_blank"
+                    <div
                       style="
-                        display: inline-block;
-                        box-sizing: border-box;
-                        font-size: 16px;
-                        text-align: center;
-                        padding: 9px 0;
-                        text-decoration: none;
-                        font-weight: 500;
-                        color: #ffffff;
-                        background-color: black;
-                        width: 220px;
-                        height: 45px;
-                        border: none;
-                        border-radius: 4px;
-                        margin-top: 60px;
-                        margin-left: 140px;
-                        cursor: pointer;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
                       "
-                      >초대 수락</a
                     >
+                      <a
+                        href="{{activate_url}}"
+                        target="_blank"
+                        style="
+                          display: inline-block;
+                          box-sizing: border-box;
+                          font-size: 16px;
+                          text-align: center;
+                          padding: 9px 0;
+                          text-decoration: none;
+                          font-weight: 500;
+                          color: #ffffff;
+                          background-color: black;
+                          width: 220px;
+                          height: 45px;
+                          border: none;
+                          border-radius: 4px;
+                          margin-top: 60px;
+                          cursor: pointer;
+                        "
+                        >이메일 인증</a
+                      >
+                    </div>
                     <hr
                       style="
                         height: 2px;

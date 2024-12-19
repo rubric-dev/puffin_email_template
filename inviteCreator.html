@@ -76,36 +76,43 @@
                         padding: 0px 16px;
                       "
                     >
-                      {Creater Name}님, 안녕하세요!<br /><br />
+                      {{createrName}}님, 안녕하세요!<br /><br />
 
-                      {brand}의 크리에이터로 활동하기 위해 초대를 보냅니다.
+                      {{brand}}의 크리에이터로 활동하기 위해 초대를 보냅니다.
                       <br /><br />
-                      아래 버튼을 누르고 {brand}의 크리에이터로 등록해
+                      아래 버튼을 누르고 {{brand}}의 크리에이터로 등록해
                       주세요.<br /><br />
                     </p>
-                    <a
-                      href="{{activate_url}}"
-                      target="_blank"
+                    <div
                       style="
-                        display: inline-block;
-                        box-sizing: border-box;
-                        font-size: 16px;
-                        text-align: center;
-                        padding: 9px 0;
-                        text-decoration: none;
-                        font-weight: 500;
-                        color: #ffffff;
-                        background-color: black;
-                        width: 220px;
-                        height: 45px;
-                        border: none;
-                        border-radius: 4px;
-                        margin-top: 60px;
-                        margin-left: 100px;
-                        cursor: pointer;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
                       "
-                      >크리에이터 등록</a
                     >
+                      <a
+                        href="{{activate_url}}"
+                        target="_blank"
+                        style="
+                          display: inline-block;
+                          box-sizing: border-box;
+                          font-size: 16px;
+                          text-align: center;
+                          padding: 9px 0;
+                          text-decoration: none;
+                          font-weight: 500;
+                          color: #ffffff;
+                          background-color: black;
+                          width: 220px;
+                          height: 45px;
+                          border: none;
+                          border-radius: 4px;
+                          margin-top: 60px;
+                          cursor: pointer;
+                        "
+                        >크리에이터 등록</a
+                      >
+                    </div>
                     <hr
                       style="
                         height: 2px;
