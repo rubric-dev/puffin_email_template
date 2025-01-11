@@ -10,117 +10,152 @@
       rel="stylesheet"
     />
     <title>[퍼핀] 브랜드 관리자 멤버로 초대</title>
-    <style>
-      body {
-        font-family: "Noto Sans KR", sans-serif;
-        background-color: #e5e5e5;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-      }
-
-      .container {
-        width: 600px;
+  </head>
+  <body
+    style="font-family: 'Noto Sans KR', sans-serif;    background-color: white !important;
+      color: black !important;""
+  >
+    <div
+      style="
+        width: 480px;
         background-color: white;
         border-radius: 4px;
-        padding: 40px 20px;
-        margin: 40px auto;
-        box-sizing: border-box;
-      }
+        height: fit-content;
+        padding: 40px 0;
+        margin: 0 auto;
+      "
+    >
+      <table
+        style="
+          font-size: 12px;
+          line-height: 1.5;
+          word-wrap: break-word;
+          word-break: normal;
+          letter-spacing: -1px;
+          font-family: AppleSDGothicNeo-Regular, sans-serif;
+          -webkit-text-size-adjust: none;
+          width: 100%;
+          border-top-width: 0px;
+          border-right-width: 0px;
+          border-bottom-width: 0px;
+          border-left-width: 0px;
+          -webkit-border-horizontal-spacing: 0px;
+          -webkit-border-vertical-spacing: 0px;
+          margin: 0px;
+          padding: 0px;
+        "
+      >
+        <tbody>
+          <tr style="height: 38px">
+            <td style="text-align: center; height: 100%; padding: 0; margin: 0">
+              <img
+                src="https://puffin-logo.s3.us-east-1.amazonaws.com/puffin_email_logo.png"
+                width="60"
+              />
+            </td>
+          </tr>
+          <tr></tr>
+        </tbody>
+      </table>
+      <table style="width: 100%; padding: 40px 0; margin: 0px auto">
+        <tbody>
+          <tr>
+            <td style="text-align: left">
+              <p
+                style="
+                  font-size: 16px;
+                  font-weight: 400;
+                  padding: 0;
+                  margin: 0;
+                  text-align: left;
+                  box-sizing: border-box;
+                  padding: 0px 16px;
+                          color: black !important"
+                "
+              >
+                환영합니다!<br /><br />
+                {{brandName}}에서 퍼핀 서비스의 관리자 멤버로 초대합니다.
+                <br /><br />
 
-      .logo {
-        text-align: center;
-        margin-bottom: 20px;
-      }
+                아래 버튼을 클릭하셔서 초대를 수락하고, 회원가입을 완료 해주세요
+                🙂<br /><br />
+              </p>
+              <div style="width: 100%; display: flex; justify-content: center">
+                <a
+                  href="{{activate_url}}"
+                  target="_blank"
+                  style="
+                    display: inline-block;
+                    box-sizing: border-box;
+                    font-size: 16px;
+                    text-align: center;
+                    padding: 10px 18px;
+                    text-decoration: none;
+                    font-weight: 500;
+               color: #ffffff !important;
+                    background-color: black !important;
+                    width: 100%;
+                    height: 45px;
+                    border: none;
+                    border-radius: 4px;
+                    margin-top: 40px;
+                    cursor: pointer;
+                  "
+                  >이메일 인증</a
+                >
+              </div>
 
-      .content {
-        font-size: 16px;
-        line-height: 1.6;
-        color: black;
-        margin-bottom: 30px;
-      }
+              <p
+                style="
+                  font-size: 12px;
+                  font-weight: 400;
+                  padding: 0;
+                  margin: 0;
+                  text-align: center;
+                  box-sizing: border-box;
+                  padding: 16px;
+                    color: black !important"
+                "
+              >
+                가입을 시도하지 않았는데 이 이메일이 도착했다면, 메일을
+                무시하세요.
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-      .button {
-        display: block;
-        font-size: 16px;
-        text-align: center;
-        padding: 10px 0;
-        text-decoration: none;
-        font-weight: 500;
-        color: #ffffff;
-        background-color: black;
-        width: 100%;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-      }
-
-      .footer {
-        font-size: 10px;
-        text-align: center;
-        color: gray;
-        margin-top: 40px;
-      }
-
-      .footer img {
-        width: 50px;
-        margin-bottom: 10px;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        body {
-          background-color: #ffffff !important;
-        }
-
-        .container {
-          background-color: #ffffff !important;
-          color: #000 !important;
-        }
-
-        .button {
-          background-color: black !important;
-          color: #ffffff !important;
-        }
-
-        .notice,
-        .footer {
-          color: #aaa !important;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="logo">
-        <img
-          src="https://puffin-logo.s3.us-east-1.amazonaws.com/puffin_email_logo.png"
-          width="60"
-          alt="Puffin Logo"
-        />
-      </div>
-      <div class="content">
-        환영합니다!<br /><br />
-        <strong>{{brandName}}</strong>에서 퍼핀 서비스의 관리자 멤버로
-        초대합니다. <br /><br />
-        아래 버튼을 클릭하셔서 초대를 수락하고, 회원가입을 완료해주세요. 🙂
-      </div>
-      <a href="{{activate_url}}" target="_blank" class="button">이메일 인증</a>
-      <p style="font-size: 12px; text-align: center; color: black">
-        가입을 시도하지 않았는데 이 이메일이 도착했다면, 메일을 무시하세요.
-      </p>
-      <div class="footer">
-        <img
-          src="https://puffin-logo.s3.us-east-1.amazonaws.com/puffin_logo.jpeg"
-          alt="Puffin Logo"
-        />
-        <p>
-          퍼핀<span style="margin: 0 5px">|</span
-          ><a href="https://www.puffin.kr">https://www.puffin.kr</a
-          ><span style="margin: 0 5px">|</span
-          ><a href="mailto:support@rubric.im">support@rubric.im</a>
-        </p>
-        <p>Copyright © 2024 Puffin, All rights reserved.</p>
-      </div>
+      <table style="margin: 0 auto">
+        <tbody>
+          <tr>
+            <td
+              style="
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+              "
+            >
+              <img
+                src="https://puffin-logo.s3.us-east-1.amazonaws.com/puffin_logo.jpeg"
+                width="50"
+              />
+              <p style="padding: 0; margin: 0;  color: black !important"">
+                퍼핀<span style="margin: 0 5px">|</span
+                ><a style="display: inline" href="https://iceberg.fit/"
+                  >https://www.puffin.kr</a
+                ><span style="margin: 0 5px">|</span
+                ><a style="display: inline" href="mailto:support@iceberg.fit"
+                  >support@rubric.im</a
+                >
+              </p>
+              <p style="padding: 0; margin: 0; margin-top: 3px;  color: black !important"">
+                Copyright © 2024 Puffin, All rights reserved.
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>
 </html>
